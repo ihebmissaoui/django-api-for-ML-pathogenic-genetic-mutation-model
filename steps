@@ -37,3 +37,11 @@ check priate ssh key : cd ~/.ssh/
   adding it to the SSH agent.                     ssh-add ~/.ssh/id_ed25519
   test connection with gituhb : ssh -T git@github.com
   remove ald git file : rm -rf .git
+  initalize git : git init
+                git add .
+                git branch core
+                git checkout -b core
+                git commit -m "first commit"
+    git remote add origin git@github.com:ihebmissaoui/django-api-for-ML-pathogenic-genetic-mutation-model.git
+   Push 'core' Branch to Remote as a New Branch: git push origin core:core
+         git remote -v    
