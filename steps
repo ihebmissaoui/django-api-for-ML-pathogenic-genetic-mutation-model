@@ -1,0 +1,39 @@
+step1 
+Create virtual env with 
+python3 -m venv venv
+next create requirement.txt with touch requirement.txt
+instead this file insert Django==4.1.3
+                            djangorestframework==3.14.0
+then switch to this env with : source venv/Scripts/activate
+than install librairies with pip install -r requirement.txt
+than verify with pip freeze
+than create new project with admin dashboard with django-admin startproject DjangoAPI
+
+make migration with(create db) : python manage.py makemigrations
+                      python manage.py migrate
+create super user :python manage.py createsuperuser
+first deploy (test):python manage.py runserver
+create app : django-admin startapp MyAPI
+Update setting.py :update INSTALLED_APPS : add 'rest_framework'
+                                                  'MyAPI'
+hide secret key in production(i will not do it for now)                                                  
+copy urls.py in MyAPI and add MyAPI in urls.py in DJANGOAPI
+create PATHOGENIC model and add attributes
+register it in admin.py
+test model : make migrations... runserver add model in admindashboard
+create serializer.py
+create views 
+create urls
+install libreaireies
+
+step 2
+add .gitignore 
+add env.template
+add readme.md 
+add ssh key to agent (generated previously and added public key to github):
+activate agent : eval "$(ssh-agent)"
+check priate ssh key : cd ~/.ssh/
+                        ls -al
+  adding it to the SSH agent.                     ssh-add ~/.ssh/id_ed25519
+  test connection with gituhb : ssh -T git@github.com
+  remove ald git file : rm -rf .git
